@@ -76,6 +76,8 @@ public extension WrappingHStack {
 
 #if os(iOS)
         let hostingController = UIHostingController(rootView: view)
+#elseif os(tvOS)
+        let hostingController = UIHostingController(rootView: view)
 #else
         let hostingController = NSHostingController(rootView: view)
 #endif
